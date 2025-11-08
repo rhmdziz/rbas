@@ -1,10 +1,12 @@
 "use client";
 import { useState } from "react";
 
+import { InformationDetail } from "@/data/information_detail";
+
 export default function WhatsappButton() {
   const [hovered, setHovered] = useState(false);
 
-  const phoneNumber = "6281234567890";
+  const phoneNumber = InformationDetail.whatsapp;
   const message =
     "Halo! Saya ingin bertanya tentang Rumah Belajar Abi Sakinah.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
@@ -12,12 +14,12 @@ export default function WhatsappButton() {
   )}`;
   return (
     <div
-      className="fixed bottom-10 right-10 flex items-center gap-2 z-50"
+      className="fixed bottom-10 right-10 flex items-center gap-2 z-50 "
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
       <div
-        className={`bg-green-600 text-white text-sm px-3 py-1.5 rounded-full shadow-md transition-all duration-100 ${
+        className={`bg-green-600 text-white text-sm px-3 py-1.5 rounded-full shadow-md transition-all duration-100  ${
           hovered
             ? "opacity-100 translate-x-0"
             : "opacity-0 translate-x-3 pointer-events-none"
@@ -30,7 +32,7 @@ export default function WhatsappButton() {
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-green-500 p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 hover:scale-110"
+        className="bg-green-500 p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 hover:scale-105"
         aria-label="Chat via WhatsApp"
       >
         <svg

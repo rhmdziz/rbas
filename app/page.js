@@ -1,3 +1,4 @@
+import BackToTopButton from "@/components/back_to_top";
 import Footer from "@/components/layout/footer";
 import Main from "@/components/layout/main";
 import Navbar from "@/components/layout/navbar";
@@ -13,6 +14,8 @@ export default function Home() {
       </Main>
       <Footer />
       <WhatsappButton />
+
+      <BackToTopButton />
     </>
   );
 }
