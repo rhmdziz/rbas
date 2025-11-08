@@ -22,20 +22,20 @@ export default function Navbar() {
   return (
     <>
       <div
-        className={`bg-background w-full py-3 flex justify-center z-9999 fixed
-          ${isScrolled ? "shadow" : "shadow-none"}
-          `}
+        className={`fixed top-0 left-0 bg-background w-full py-3 flex items-center justify-center z-50
+    ${isScrolled ? "shadow" : "shadow-none"}
+  `}
       >
-        <div className="flex justify-between items-center mx-0 max-w-5xl w-full">
+        <div className="flex justify-between items-center mx-auto max-w-4xl w-full font-rubik">
           <Link href="/">
             <p className="text-lg font-medium">Rumah Belajar Abi Sakinah</p>
           </Link>
           <ul className="hidden md:flex items-center gap-4 text-sm">
             {[
-              { name: "Beranda", href: "#" },
+              { name: "Beranda", href: "/" },
               { name: "Tentang", href: "#" },
               { name: "Program", href: "#" },
-              { name: "Galeri", href: "#" },
+              { name: "Galeri", href: "/gallery" },
               { name: "Kontak", href: "#" },
             ].map((item) => (
               <li key={item.name}>
@@ -44,7 +44,7 @@ export default function Navbar() {
                   className="
                     relative text-foreground transition-all duration-300
                     before:content-[''] before:absolute before:-bottom-1 before:left-0
-                    before:w-0 before:h-[2px] before:bg-orange
+                    before:w-0 before:h-0.5 before:bg-orange
                     hover:before:w-full hover:text-orange
                     before:transition-all before:duration-300
                   "

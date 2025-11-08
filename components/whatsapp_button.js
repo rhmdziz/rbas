@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
 
-import { InformationDetail } from "@/data/information_detail";
+import { InformationDetail } from "@/data/about";
+import Image from "next/image";
 
 export default function WhatsappButton() {
   const [hovered, setHovered] = useState(false);

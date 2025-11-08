@@ -4,21 +4,21 @@ import Link from "next/link";
 import {
   FacebookFilled,
   InstagramOutlined,
-  MailOutlined,
-  TikTokFilled,
   TikTokOutlined,
   WhatsAppOutlined,
 } from "@ant-design/icons";
 
-import { InformationDetail } from "@/data/information_detail";
+import { InformationDetail } from "@/data/about";
 
 export default function Footer() {
   return (
     <>
-      <div className="w-full bg-obsidian text-white-secondary flex-row items-center justify-center">
-        <div className="max-w-5xl  mx-auto flex justify-between w-full gap-32 py-12">
+      <div className="w-full bg-obsidian text-white-secondary flex-row items-center justify-center font-dm-sans">
+        <div className="max-w-4xl  mx-auto flex justify-between w-full gap-12 py-12">
           <div className="w-[50%]">
-            <h2 className="text-2xl font-medium">Rumah Belajar Abi Sakinah</h2>
+            <h2 className="text-2xl font-medium font-rubik">
+              Rumah Belajar Abi Sakinah
+            </h2>
             <p className="text-sm mt-1 mb-6 italic">
               Belajar, berprestasi, berakhlak, & bermanfaat
             </p>
@@ -34,7 +34,7 @@ export default function Footer() {
               className="rounded-lg shadow-md w-full h-[350px]"
             ></iframe>
 
-            <p className="font-medium mt-4">Kantor Pusat</p>
+            <p className="font-medium mt-4 font-rubik">Kantor Pusat</p>
             <p className="text-xs my-2 leading-loose">
               {InformationDetail.address_1}
             </p>
@@ -46,7 +46,7 @@ export default function Footer() {
           <div className="w-[50%]">
             <div className="my-4 flex justify-between">
               <div>
-                <p>Quick Link</p>
+                <p className="font-rubik">Tautan Cepat</p>
                 <ul className="text-xs mt-2 ">
                   {[
                     { name: "Beranda", href: "" },
@@ -63,7 +63,7 @@ export default function Footer() {
                   ))}
                 </ul>
 
-                <p className="mt-4">Program Kami</p>
+                <p className="mt-4 font-rubik">Program Kami</p>
                 <ul className="text-xs mt-2">
                   {[
                     { name: "Kelas Menggambar", href: "" },
@@ -77,8 +77,8 @@ export default function Footer() {
                 </ul>
               </div>
               <div>
-                <p>Sosial Media Kami</p>
-                <div className="flex flex-col gap-4 mt-3">
+                <p className="font-rubik">Sosial Media Kami</p>
+                <div className="flex flex-col gap-4 mt-3 text-xs">
                   <Link
                     href={`https://wa.me/${InformationDetail.whatsapp}`}
                     target="_blank"
@@ -111,11 +111,10 @@ export default function Footer() {
           </div>
         </div>
         <div className="w-full bg-black-secondary flex justify-center">
-          <div className="max-w-5xl w-full">
-            <p className=" text-xs py-4">
+          <div className="max-w-4xl w-full">
+            <p className=" text-xs py-4 text-center font-light">
               &copy; {new Date().getFullYear()}{" "}
-              <Link href="/">Rumah Belajar Abi Sakinah</Link> | Made by Aziz &
-              Umar
+              <Link href="/">Rumah Belajar Abi Sakinah</Link>
             </p>
           </div>
         </div>

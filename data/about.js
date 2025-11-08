@@ -9,3 +9,4 @@ export const InformationDetail = {
   address_2:
     "Jl. Perwari, 9 Ilir, Kec. Ilir Tim. II, Kota Palembang, Sumatera Selatan 30265, Indonesia",
 };
+

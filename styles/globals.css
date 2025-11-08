@@ -5,11 +5,14 @@
   --foreground: #171717;
   --orange: #ff8630;
   --green: #00ADB5;
+  --gray: #555555;
 
 
   --white-secondary: #858B9F;
   --black-secondary: #1B2132;
   --obsidian: #252C41;
+
+  --background-blue: #F5F8FA;
   
   
 }
@@ -20,8 +23,12 @@
   --color-orange: var(--orange);
   --color-green: var(--green);
   --color-obsidian: var(--obsidian);
+  --color-gray: var(--gray);
   --color-white-secondary: var(--white-secondary);
   --color-black-secondary: var(--black-secondary);
+  --color-background-blue: var(--background-blue);
+  --font-rubik: var(--font-rubik);
+  --font-dm-sans: var(--font-dm-sans);
 }
 
 @layer base {
@@ -32,6 +39,43 @@
   body {
     color: var(--foreground);
     background: var(--background);
-    font-family: var(--font-rubik);
+    
   }
+}
+
+@layer utilities {
+  .swiper-pagination-bullet {
+    width: 24px !important;
+    height: 4px !important;
+    border-radius: 2px !important;
+    background: var(--orange) !important;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    
+  }
+
+  .swiper-pagination-bullet-active {
+    background: var(--color-green) !important;
+    opacity: 1;
+  }
+
+  .achievement-swiper .swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 0.75) !important;
+  }
+
+  .achievement-swiper .swiper-pagination-bullet-active {
+    background: #ffffff !important;
+  }
+
+
+  @keyframes shake-loop {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-4deg); }
+    75% { transform: rotate(4deg); }
+  }
+
+  .shake-loop {
+    animation: shake-loop 1s ease-in-out infinite;
+  }
+
 }
