@@ -4,17 +4,12 @@
   --background: #ffffff;
   --foreground: #171717;
   --orange: #ff8630;
-  --green: #00ADB5;
+  --green: #00adb5;
   --gray: #555555;
-
-
   --white-secondary: #858B9F;
   --black-secondary: #1B2132;
   --obsidian: #252C41;
-
   --background-blue: #F5F8FA;
-  
-  
 }
 
 @theme inline {
@@ -35,36 +30,42 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     color: var(--foreground);
-    background: var(--background);
-    
+    background: linear-gradient(180deg, #ffffff 0%, #f5f8fa 100%);
+    font-family: var(--font-dm-sans), sans-serif;
+  }
+
+  ::selection {
+    color: #ffffff;
+    background: color-mix(in srgb, var(--orange) 88%, black 12%);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-rubik), sans-serif;
   }
 }
 
 @layer utilities {
-  .swiper-pagination-bullet {
-    width: 24px !important;
-    height: 4px !important;
-    border-radius: 2px !important;
-    background: var(--orange) !important;
+  .carousel-dot {
+    width: 24px;
+    height: 4px;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--orange) 72%, white 28%);
     opacity: 0.6;
     transition: all 0.3s ease;
-    
+    cursor: pointer;
   }
 
-  .swiper-pagination-bullet-active {
-    background: var(--color-green) !important;
+  .carousel-dot.is-active {
+    background: var(--green);
     opacity: 1;
-  }
-
-  .achievement-swiper .swiper-pagination-bullet {
-    background: rgba(255, 255, 255, 0.75) !important;
-  }
-
-  .achievement-swiper .swiper-pagination-bullet-active {
-    background: #ffffff !important;
   }
 
 
